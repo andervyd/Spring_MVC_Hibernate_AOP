@@ -7,7 +7,10 @@
 
     <meta charset="UTF-8">
     <title>Show form</title>
-    <style><%@include file="/WEB-INF/css/style.css"%></style>
+    <style><%@include file="/resources/css/style.css"%></style>
+
+    <link rel="shortcut icon"
+          href="resources/img/favicon.png" />
 
 </head>
 
@@ -34,6 +37,10 @@
                 <label>${employees.salary}$</label>
             </c:forEach>
         </div>
+    </div>
+
+    <div id="bg">
+        <img src="resources/img/background.jpeg" alt="">
     </div>
 
 </body>

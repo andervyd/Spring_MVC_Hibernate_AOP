@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+#bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.container{
+    position: relative;
+    z-index: 2;
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block: 100px;
+    padding-top: 10px;
+    background: salmon;
+    opacity: 90%;
+}
+
+label#header{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.table, .get-employee{
+    text-align: center;
+    background: rgb(141, 194, 196);
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr ;
+}
+
+.get-employee{
+    padding-top: 5px;
+}
