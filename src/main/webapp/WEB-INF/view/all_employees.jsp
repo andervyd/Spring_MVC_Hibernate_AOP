@@ -1,13 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
 <!DOCTYPE html>
 <html>
 
 <head>
+
     <meta charset="UTF-8">
     <title>Show form</title>
     <style><%@include file="/WEB-INF/css/style.css"%></style>
-    <link rel="shortcut icon" href="<c:url value='../img/favicon.ico'/>" />
+
 </head>
 
 <body>
