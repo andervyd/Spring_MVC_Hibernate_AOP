@@ -32,4 +32,13 @@ public class EmployeeDAOImplementation implements EmployeeDAO {
 
         return allEmployee;
     }
+
+    @Override
+    public void savingEmployeeData(Employee employee) {
+
+        Session session = sessionFactory.getCurrentSession();
+
+        session.save(employee);
+
+    }
 }

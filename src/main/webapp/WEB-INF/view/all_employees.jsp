@@ -37,6 +37,9 @@
                 <label>${employees.salary}$</label>
             </c:forEach>
         </div>
+
+        <input class="bt" type="button" value="add" onclick="window.location.href = 'add-new-employee'"/>
+
     </div>
 
     <div id="bg">
