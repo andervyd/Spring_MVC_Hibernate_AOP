@@ -26,4 +26,11 @@ public class EmployeeServiceImplementation implements EmployeeService {
 
         employeeDAO.savingEmployeeData(employee);
     }
+
+    @Override
+    @Transactional
+    public Employee getEmployee(Long id) {
+
+        return employeeDAO.getEmployee(id);
+    }
 }

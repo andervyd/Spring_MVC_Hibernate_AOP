@@ -38,7 +38,22 @@ public class EmployeeDAOImplementation implements EmployeeDAO {
 
         Session session = sessionFactory.getCurrentSession();
 
-        session.save(employee);
+/*
+        if(employee.getId() == 0) {
+            session.save(employee);
+        } else session.update(employee);
+*/
 
+        session.saveOrUpdate(employee);
+
+    }
+
+    @Override
+    public Employee getEmployee(Long id) {
+
+        Session session = sessionFactory.getCurrentSession();
+        Employee employee = session.get(Employee.class, id);
+
+        return employee;
     }
 }

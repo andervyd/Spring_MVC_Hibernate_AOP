@@ -8,4 +8,6 @@ public interface EmployeeService {
     public List<Employee> getAllEmployees();
 
     public void savingEmployeeData(Employee employee);
+
+    public Employee getEmployee(Long id);
 }
