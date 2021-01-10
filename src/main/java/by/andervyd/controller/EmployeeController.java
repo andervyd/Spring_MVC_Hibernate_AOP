@@ -52,4 +52,12 @@ public class EmployeeController {
 
         return  "employee_info";
     }
+
+    @RequestMapping("/delete-employee")
+    public String deletingEmployee(@RequestParam("employeeId") Long id) {
+
+        employeeService.deleteEmployee(id);
+
+        return  "redirect:/";
+    }
 }

@@ -28,7 +28,7 @@ public class EmployeeDAOImplementation implements EmployeeDAO {
 
         // v2
         List<Employee> allEmployee = session.createQuery(
-                "from Employee", Employee.class).getResultList();
+                "FROM Employee", Employee.class).getResultList();
 
         return allEmployee;
     }
@@ -55,5 +55,15 @@ public class EmployeeDAOImplementation implements EmployeeDAO {
         Employee employee = session.get(Employee.class, id);
 
         return employee;
+    }
+
+    @Override
+    public void deleteEmployee(Long id) {
+
+        Session session = sessionFactory.getCurrentSession();
+        Query<Employee> query = session.createQuery(
+                "DELETE FROM Employee WHERE id = :employeeId");
+        query.setParameter("employeeId", id);
+        query.executeUpdate();
     }
 }

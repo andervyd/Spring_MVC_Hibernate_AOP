@@ -12,4 +12,6 @@ public interface EmployeeDAO {
 
     public Employee getEmployee(Long id);
 
+    public void deleteEmployee(Long id);
+
 }

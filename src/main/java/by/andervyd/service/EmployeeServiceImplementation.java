@@ -33,4 +33,11 @@ public class EmployeeServiceImplementation implements EmployeeService {
 
         return employeeDAO.getEmployee(id);
     }
+
+    @Override
+    @Transactional
+    public void deleteEmployee(Long id) {
+
+        employeeDAO.deleteEmployee(id);
+    }
 }

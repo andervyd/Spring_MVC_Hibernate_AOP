@@ -9,7 +9,8 @@
     <meta charset="UTF-8">
     <title>Show form</title>
     <style><%@include file="/resources/css/style.css"%></style>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="shortcut icon"
           href="resources/img/favicon.png" />
 

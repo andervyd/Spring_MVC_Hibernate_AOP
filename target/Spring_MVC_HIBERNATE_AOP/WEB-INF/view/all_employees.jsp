@@ -8,13 +8,28 @@
     <meta charset="UTF-8">
     <title>Show form</title>
     <style><%@include file="/resources/css/style.css"%></style>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="shortcut icon"
           href="resources/img/favicon.png" />
 
 </head>
 
 <body>
+
+<!-- cсылка на модальное окно -->
+<a href="#ModalOpen" title="">text for link</a>
+<!-- само модальное окно -->
+<div id="ModalOpen" class="Window">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <p>Content</p>
+        <input type="button" value="yes"/>
+        <input type="button" value="no"/>
+<%--        <img src="img/demo.jpg" alt="..." />--%>
+    </div>
+</div>
+
 
     <div class="container">
 
@@ -38,6 +53,10 @@
                     <c:param name="employeeId" value="${employees.id}"/>
                 </c:url>
 
+                <c:url var="deleteButton" value="/delete-employee">
+                    <c:param name="employeeId" value="${employees.id}"/>
+                </c:url>
+
                 <label>${employees.id}</label>
                 <label>${employees.name}</label>
                 <label>${employees.surname}</label>
@@ -46,6 +65,8 @@
 
                 <input type="button" value="Update" onclick="window.location.href='${updateButton}'"/>
 
+                <input type="button" value="Delete" onclick="window.location.href='${deleteButton}'"/>
+
             </c:forEach>
         </div>
 
@@ -53,9 +74,11 @@
 
     </div>
 
+<%--
     <div id="bg">
         <img src="resources/img/background.jpeg" alt="">
     </div>
+--%>
 
 </body>
 </html>
