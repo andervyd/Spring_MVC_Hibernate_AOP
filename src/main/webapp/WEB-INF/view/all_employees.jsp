@@ -44,12 +44,12 @@
                 <label>${employees.department}</label>
                 <label>${employees.salary}$</label>
 
-                <input type="button" value="Update" onclick="window.location.href='updateButton'">
+                <input type="button" value="Update" onclick="window.location.href='${updateButton}'"/>
 
             </c:forEach>
         </div>
 
-        <input class="bt" type="button" value="add" onclick="window.location.href = 'add-new-employee'"/>
+        <input class="bt" type="button" value="add" onclick="window.location.href='add-new-employee'"/>
 
     </div>
 
